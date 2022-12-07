@@ -9,23 +9,16 @@ document.body.append(wrapper)
 let count = 1
 button.addEventListener('click', () => {
     if(count % 2 === 0) {
-        addGray()
+        addClass('card-gray')
     } else {
-        addRed()
+        addClass('card-red')
     }})
 
 
     
-    function addGray() {
+    function addClass(cardClass) {
         let card = document.createElement('div')
-        card.classList.add('card-gray')
-        wrapper.append(card)
-        card.innerHTML = count
-        count += 1
-    }
-    function addRed() {
-        let card = document.createElement('div')
-        card.classList.add('card-red')
+        card.classList.add(cardClass)
         wrapper.append(card)
         card.innerHTML = count
         count += 1
